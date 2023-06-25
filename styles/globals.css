@@ -2,26 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root[data-theme="light"] {
+    --bg-page-primary: #ffffff;
+    --bg-page-secondary: #f8f9fa;
+    --bg-block-tertiary: #eef1f4;
+
+    --border-primary: #cdd5de;
+
+    --text-title: #0e1114;
+    --text-primary: #0e1114;
+    --text-secondary: #616c76;
+
+    --system-error: #fe2836;
+    --system-success: #1d9745;
+    --system-info: #0086ea;
+
+    --Interactive-primary: #0086ea;
+    --Interactive-primary-hover: #53a0ff;
+    --Interactive-primary-click: #0d6cbd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root[data-theme="dark"] {
+    --bg-page-primary: #181c20;
+    --bg-page-secondary: #0e1114;
+    --bg-block-tertiary: #4a545c;
+
+    --border-primary: #4a545c;
+
+    --text-title: #cdd5de;
+    --text-primary: #eef1f4;
+    --text-secondary: #abbbc9;
+
+    --system-error: #a80817;
+    --system-success: #157b2f;
+    --system-info: #0d6cbd;
+
+    --Interactive-primary: #53a0ff;
+    --Interactive-primary-hover: #0d6cbd;
+    --Interactive-primary-click: #0086ea;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+ 
