@@ -2,44 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root[data-theme="light"] {
-    --bg-page-primary: #ffffff;
-    --bg-page-secondary: #f8f9fa;
-    --bg-block-tertiary: #eef1f4;
+body {
+    --bg-page-primary: #ededed;
+    --bg-page-second: #ffffff;
 
-    --border-primary: #cdd5de;
+    --theme-color: #6967ab;
 
-    --text-title: #0e1114;
-    --text-primary: #0e1114;
-    --text-secondary: #616c76;
+    --text-black: #000000;
+    --text-white: #fff;
+    --text-dark: #2c2c2c;
+    --text-light: #ffffff;
 
-    --system-error: #fe2836;
-    --system-success: #1d9745;
-    --system-info: #0086ea;
-
-    --Interactive-primary: #0086ea;
-    --Interactive-primary-hover: #53a0ff;
-    --Interactive-primary-click: #0d6cbd;
+    --light-green: #868b5d;
+    --brown: #94744f;
+    --green: #558156;
 }
 
-:root[data-theme="dark"] {
-    --bg-page-primary: #181c20;
-    --bg-page-secondary: #0e1114;
-    --bg-block-tertiary: #4a545c;
-
-    --border-primary: #4a545c;
-
-    --text-title: #cdd5de;
-    --text-primary: #eef1f4;
-    --text-secondary: #abbbc9;
-
-    --system-error: #a80817;
-    --system-success: #157b2f;
-    --system-info: #0d6cbd;
-
-    --Interactive-primary: #53a0ff;
-    --Interactive-primary-hover: #0d6cbd;
-    --Interactive-primary-click: #0086ea;
+:root[data-theme="light-green"] {
+    --theme-color: #868b5d;
+}
+:root[data-theme="brown"] {
+    --theme-color: #94744f;
+}
+:root[data-theme="green"] {
+    --theme-color: #558156;
 }
 
- 
+body {
+    background-color: var(--bg-page-primary);
+    transition: color 0.1s ease;
+}

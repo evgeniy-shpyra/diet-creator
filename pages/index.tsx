@@ -1,13 +1,31 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Main from "@/components/main";
+import Main from "@/components/main"
+import Header from "@/components/header"
 
-const inter = Inter({ subsets: ["latin"] });
+import BigButton from "@/components/elements/buttons/BigButton"
+import Link from "next/link"
+import { useAppSelector } from "@/hooks/reduxHooks"
 
 export default function HomePage() {
+    const headerHeight = useAppSelector((state) => state.app.headerHeight)
     return (
-        <Main>
-            <h3 className="h-[80px] w-full">HamePage</h3>
+        <Main
+            style={{ minHeight: `calc(100vh - ${headerHeight}px)` }}
+            className={`flex justify-center items-center gap-[30px]`}
+        >
+            <Link href='/simple-menu'>
+                <BigButton className='bg-[var(--light-green)] text-[var(--text-light)] border-[2px] border-[var(--text-dark)]'>
+                    ПРОСТЕ МЕНЮ
+                </BigButton>
+            </Link>
+            <Link href='/daily-menu'>
+                <BigButton className='bg-[var(--brown)] text-[var(--text-light)] border-[2px] border-[var(--text-dark)]'>
+                    ДЕННЕ МЕНЮ
+                </BigButton>
+            </Link>
+
+            <p className='absolute bottom-[5px] left-[50%] translate-x-[-50%] text-[var(--text-dark] opacity-[0.6]'>
+                © 2023 Zhenki Entertainment
+            </p>
         </Main>
-    );
+    )
 }

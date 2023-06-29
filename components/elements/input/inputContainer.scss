@@ -1,0 +1,12 @@
+.input-container {
+    @apply inline-block relative;
+
+    &::before {
+        content: "";
+        @apply absolute top-[50%] translate-y-[-50%] w-[10px] h-[10px] bg-black rounded-full opacity-0 transition-opacity;
+    }
+
+    &:hover::before {
+        @apply opacity-[1];
+    }
+}
