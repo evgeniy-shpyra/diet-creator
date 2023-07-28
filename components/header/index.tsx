@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ className = "" }) => {
 
     return (
         <header
-            className={`bg-[var(--theme-color)] h-[60px] w-full flex items-center ${className}`}
+            className={`bg-[var(--theme-color)] h-[60px] min-w-[1400px] w-full flex items-center ${className}`}
         >
             <div className='mx-auto px-[40px] w-[1400px] max-w-[1400px] h-full flex items-center justify-between gap-[15px]'>
                 <i

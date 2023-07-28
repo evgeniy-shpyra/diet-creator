@@ -6,8 +6,6 @@ body {
     --bg-page-primary: #ededed;
     --bg-page-second: #ffffff;
 
-    --theme-color: #6967ab;
-
     --text-black: #000000;
     --text-white: #fff;
     --text-dark: #2c2c2c;
@@ -18,14 +16,22 @@ body {
     --green: #558156;
 }
 
+:root[data-theme="default"] {
+    --theme-color: #6967ab;
+    --theme-text-color: #D3D8AF;
+}
+
 :root[data-theme="light-green"] {
     --theme-color: #868b5d;
+    --theme-text-color: #D3D8AF;
 }
 :root[data-theme="brown"] {
     --theme-color: #94744f;
+    --theme-text-color: #E7C399;
 }
 :root[data-theme="green"] {
     --theme-color: #558156;
+    --theme-text-color: #96E098;
 }
 
 body {

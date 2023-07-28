@@ -1,54 +1,67 @@
-import Image from "next/image"
-import React from "react"
-import imgLeaves from "@/assets/images/simple-leaves.png"
-import imgKiwi from "@/assets/images/simple-kiwi.png"
-import InputContainer from "../input/InputContainer"
+import Image from "next/image";
+import React from "react";
+import imgLeaves from "@/assets/images/simple-leaves.png";
+import imgKiwi from "@/assets/images/simple-kiwi.png";
+import InputContainer from "../input/InputContainer";
 
 const Template = () => {
-    const inputRef = React.useRef(null)
+    const inputRef = React.useRef(null);
 
-    const handleInputChange = () => {
-        const inputElement: any = inputRef.current
-        if (inputElement) {
-            const textWidth = inputElement
-            console.log("Text width:", textWidth, "pixels")
-        }
-    }
 
     return (
-        <div className='template'>
-            <section className='template__section template__section_first'>
+        <div className="template">
+            <section className="template__section template__section_first">
                 <Image
                     src={imgLeaves}
-                    alt='Picture'
-                    className='template__image template__image_first'
+                    alt="Picture"
+                    className="template__image template__image_first"
                 />
-                <div className='template__content'>
-                    <h4 className='template__subtitle'>ПЛАН ХАРЧУВАННЯ</h4>
+                <div className="template__content">
+                    <h4 className="template__subtitle">ПЛАН ХАРЧУВАННЯ</h4>
                     <InputContainer>
                         <input
                             ref={inputRef}
-                            onChange={handleInputChange}
-                            className='template__input template__input_title'
-                            type='text'
+                            className="template__input template__input_title"
+                            type="text"
                             maxLength={14}
-                            placeholder='Назва меню'
+                            placeholder="Назва меню"
                         />
                     </InputContainer>
                 </div>
                 <Image
                     src={imgKiwi}
-                    alt='Picture'
-                    className='template__image template__image_second'
+                    alt="Picture"
+                    className="template__image template__image_second"
                 />
             </section>
-            <section className='relative bg-[var(--light-green)] h-[390px] flex items-center justify-center'>
-                {/* <Image src={imgFirst} alt='Picture' className="absolute top-0 left-0 w-[800px]" /> */}
-
-                <h3></h3>
+            <section className="template__section section section_first">
+                <div className="section__header">
+                    <h3 className="section__title">
+                        <InputContainer>
+                            <input
+                                type="text"
+                                maxLength={14}
+                                placeholder="Період дня"
+                            />
+                        </InputContainer>
+                    </h3>
+                    <h4 className="section__subtitle">
+                        <InputContainer>
+                            <input
+                                type="text"
+                                maxLength={14}
+                                placeholder="Назва страви"
+                            />
+                        </InputContainer>
+                    </h4>
+                </div>
+                <div className="section__body">
+                    <div className="section__ingredients"></div>
+                    <div className="section__recipe"></div>
+                </div>
             </section>
         </div>
-    )
-}
+    );
+};
 
-export default Template
+export default Template;

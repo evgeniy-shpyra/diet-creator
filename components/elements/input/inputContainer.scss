@@ -1,12 +1,16 @@
 .input-container {
     @apply inline-block relative;
 
-    &::before {
-        content: "";
-        @apply absolute top-[50%] translate-y-[-50%] w-[10px] h-[10px] bg-black rounded-full opacity-0 transition-opacity;
+    & input {
+        @apply border-none outline-0 leading-none placeholder:opacity-[0.2] bg-transparent;
     }
 
-    &:hover::before {
-        @apply opacity-[1];
-    }
+    // &::before {
+    //     content: "";
+    //     @apply absolute top-[50%] translate-y-[-50%] w-[10px] h-[10px] bg-black rounded-full opacity-0 transition-opacity;
+    // }
+
+    // &:hover::before {
+    //     @apply opacity-[1];
+    // }
 }
